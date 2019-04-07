@@ -25,13 +25,15 @@ function rewireModule(modulePath, customizer) {
   let defaults = rewire(modulePath);
   let paths = defaults.__get__('paths');
   let config = defaults.__get__('config');
-  
+
   defaults.__set__('printFileSizesAfterBuild', () => {});
   defaults.__set__('copyPublicFolder', () => {});
-  defaults.__set__('fs', {...fsx, emptyDirSync: ()=> {}});
+  defaults.__set__('fs', { ...fsx, emptyDirSync: () => {} });
 
   // change appBuild path so that we still get nice size reports
-  paths.appBuild = path.resolve(__dirname + './../legacybuild/' + buildFileName);
+  paths.appBuild = path.resolve(
+    __dirname + './../legacybuild/' + buildFileName
+  );
 
   // change the webpack configuration to build a monolithic bundle
   customizer(config);
@@ -67,11 +69,11 @@ rewireModule('react-scripts/scripts/build.js', function(config) {
     })
   ];
 
-  // alias react and react-dom to preact-compat
+  // alias react and react-dom to preact/compat
   // react & react-dom is 4 times larger in bundle size
   config.resolve.alias = {
     ...config.resolve.alias,
-    react: 'preact-compat',
-    'react-dom': 'preact-compat'
+    react: 'preact/compat',
+    'react-dom': 'preact/compat'
   };
 });

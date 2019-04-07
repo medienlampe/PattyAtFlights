@@ -26,6 +26,13 @@ function OrderComponent(props) {
       F,
       null,
       React.createElement(
+        'h4',
+        {
+          class: 'text-left text-uppercase'
+        },
+        React.createElement('b', null, 'Orders')
+      ),
+      React.createElement(
         'div',
         {
           className: 'row vertical-center-box vertical-center-box-tablet'
@@ -77,7 +84,17 @@ function OrderComponent(props) {
     );
   }
 
-  return 'Data is loading...';
+  return React.createElement(
+    F,
+    null,
+    React.createElement(
+      'h4',
+      {
+        className: 'text-left text-uppercase'
+      },
+      React.createElement('b', null, 'Loading Orders...')
+    )
+  );
 }
 
 OrderComponent.propTypes = {

@@ -27,15 +27,19 @@ function OrderComponent(props) {
   if (data) {
     return (
       <F>
+        <h4 class="text-left text-uppercase">
+          <b>Orders</b>
+        </h4>
         <div className="row vertical-center-box vertical-center-box-tablet">
           <div className="col-xs-3 mar-bot-15 text-left">
             <label className="label bg-green">
               {' '}
-              30% <i className="fa fa-level-up" aria-hidden="true" />
+              {data.difference}%{' '}
+              <i className="fa fa-level-up" aria-hidden="true" />
             </label>
           </div>
           <div className="col-xs-9 cus-gh-hd-pro">
-            <h2 className="text-right no-margin"> 10.000 </h2>
+            <h2 className="text-right no-margin"> {data.absoluteAmount} </h2>
           </div>
         </div>
         <div className="progress progress-mini">
@@ -45,7 +49,13 @@ function OrderComponent(props) {
     );
   }
 
-  return 'Data is loading...';
+  return (
+    <F>
+      <h4 className="text-left text-uppercase">
+        <b>Loading Orders...</b>
+      </h4>
+    </F>
+  );
 }
 OrderComponent.propTypes = {
   /** additional classNames you want to add */

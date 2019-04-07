@@ -97,11 +97,8 @@
                 <div class="col-md-12">
                     <div class="row">
                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                            <div class="admin-content analysis-progrebar-ctn res-mg-t-15">
-                                <h4 class="text-left text-uppercase"><b>Orders</b></h4>
-                                <?php
-                                    require_once('order-partial.php');
-                                ?>
+                            <div id="orders" class="admin-content analysis-progrebar-ctn res-mg-t-15">
+                                
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="margin-bottom:1px;">
@@ -622,6 +619,15 @@
     <script src="js/main.js"></script>
     <!-- Preact Components -->
     <script src="preact/flightadmin.js"></script>
+    <script>
+        _preactComponents.renderOrderComponent(
+            '', 
+            document.getElementById('orders'), 
+            function(){ 
+                console.log('Done adding the order box to the DOM!')
+            }
+        );
+    </script>
 </body>
 
 </html>
