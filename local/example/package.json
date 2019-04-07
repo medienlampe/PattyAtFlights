@@ -3,6 +3,7 @@
   "version": "1.1.2",
   "private": true,
   "dependencies": {
+    "axios": "^0.18.0",
     "node-sass": "^4.11.0"
   },
   "devDependencies": {
@@ -16,10 +17,10 @@
     "pretty-quick": "^1.10.0",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
-    "react-scripts": "^2.1.5",
+    "react-scripts": "^2.1.8",
     "react-styleguidist": "^9.0.0",
-    "react-testing-library": "^5.9.0",
     "react-styleguidist-visual": "github:theZieger/react-styleguidist-visual#use-elementHandle-screenshot",
+    "react-testing-library": "^5.9.0",
     "rewire": "^4.0.1"
   },
   "scripts": {
