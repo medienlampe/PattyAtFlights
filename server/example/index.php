@@ -620,6 +620,8 @@
     <!-- main JS
 		============================================ -->
     <script src="js/main.js"></script>
+    <!-- Preact Components -->
+    <script src="preact/flightadmin.js"></script>
 </body>
 
 </html>
