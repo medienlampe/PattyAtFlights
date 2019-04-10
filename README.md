@@ -20,7 +20,7 @@ You need...
 2. You can find the code to work on at `/server/demo`.
    _Hint:_
    `/server/example` contains the finished example.
-3. Unzip the files of Patty to `/local/example` and open that directory inside a terminal
+3. Unzip the files of Patty to `/local/demo` and open that directory inside a terminal
 4. Install all prerequisites with `npm install`
 5. Start the development environment for Patty: `npm start`
 6. Have a look inside the README.md of Patty as it's describing everything you need to know.
